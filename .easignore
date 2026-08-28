@@ -1,0 +1,7 @@
+# EAS Build always runs its own prebuild in the cloud from app.config.js —
+# it never needs the locally-generated native folder. Excluding it here
+# stops EAS from uploading (and colliding on file locks with) the local
+# Android Gradle build's cache/lock files whenever a local build and an EAS
+# cloud build run at the same time.
+android/
+ios/
